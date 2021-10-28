@@ -19,36 +19,36 @@ public class FrteOibAuthPage extends BasePage {
     }
 
     @Step("Открытая страница содержит поле 'Логин'")
-    public void checkLoginInputExists(){
+    public void checkLoginInputExists() {
         $(By.name("LOGIN")).shouldBe(visible);
     }
 
     @Step("Заполнить поле 'Логин'")
-    public void setLoginValue(String loginValue){
+    public void setLoginValue(String loginValue) {
         SelenideElement login = $(By.name("LOGIN"));
         clearInputValue(login);
         login.setValue(loginValue);
     }
 
     @Step("Заполнить поле 'Пароль'")
-    public void setPasswordValue(String passwordValue){
+    public void setPasswordValue(String passwordValue) {
         SelenideElement password = $(By.name("password"));
         clearInputValue(password);
         password.setValue(passwordValue);
     }
 
     @Step("Нажать кнопку 'Войти'")
-    public void clickEnterButton(){
+    public void clickEnterButton() {
         $(".loginBtn").click();
     }
 
     @Step("Нажать на ссылку 'Восстановить пароль'")
-    public FrteOibRecoveryPasswordPage clickRecoveryPasswordLink(){
+    public FrteOibRecoveryPasswordPage clickRecoveryPasswordLink() {
         $(".recovery").click();
         return new FrteOibRecoveryPasswordPage();
     }
 
-    private void clearInputValue(SelenideElement element){
+    private void clearInputValue(SelenideElement element) {
         element.sendKeys(Keys.CONTROL + "A");
         element.sendKeys(Keys.BACK_SPACE);
     }
