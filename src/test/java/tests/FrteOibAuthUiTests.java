@@ -22,7 +22,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 public class FrteOibAuthUiTests extends TestBase {
 
     String passwordValue =  Project.config.accountPassword();
-/*
+
     @Test
     @Owner("dlapshinova")
     @Layer("web")
@@ -75,7 +75,7 @@ public class FrteOibAuthUiTests extends TestBase {
             frteOibAdminPage.userProfileName().shouldHave(text(expectedUserName));
         });
     }
-*/
+
     @Test
     @Owner("dlapshinova")
     @Layer("web")
@@ -92,7 +92,7 @@ public class FrteOibAuthUiTests extends TestBase {
         frteOibAuthPage.checkAlertContainsMessage("В данный момент вход в систему указанному пользователю недоступен");
         resetLoginAttemptsBeforeCapcha(frteOibAuthPage);
     }
-/*
+
     @Test
     @Owner("dlapshinova")
     @Layer("web")
@@ -204,7 +204,7 @@ public class FrteOibAuthUiTests extends TestBase {
             assertThat(frteOibRecoveryPasswordPage.getTitle()).isEqualTo(expectedRecoveryPasswordTitle);
         });
     }
-*/
+
     @Step("Сбросить количество попыток входа до вызова капчи")
     private void resetLoginAttemptsBeforeCapcha(FrteOibAuthPage frteOibAuthPage){
         frteOibAuthPage.setLoginValue("Iapolzovatel");
