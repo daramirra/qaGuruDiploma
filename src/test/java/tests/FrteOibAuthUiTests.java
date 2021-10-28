@@ -3,6 +3,7 @@ package tests;
 import annotations.JiraIssue;
 import annotations.JiraIssues;
 import annotations.Layer;
+import com.codeborne.selenide.Selenide;
 import com.github.javafaker.Faker;
 import config.Project;
 import io.qameta.allure.Feature;
@@ -36,6 +37,7 @@ public class FrteOibAuthUiTests extends TestBase {
 
         step("Заголовок страницы входа содержит '" + expectedTitle + "'", () -> {
             assertThat(frteOibAuthPage.getTitle()).isEqualTo(expectedTitle);
+            Selenide.clearBrowserLocalStorage();
         });
     }
 
@@ -52,6 +54,7 @@ public class FrteOibAuthUiTests extends TestBase {
         step("Страница входа не содержит ошибок в логах консоли браузера", () -> {
             String consoleLogs = getConsoleLogs();
             assertThat(consoleLogs).doesNotContain("SERVE");
+            Selenide.clearBrowserLocalStorage();
         });
     }
 
@@ -73,6 +76,7 @@ public class FrteOibAuthUiTests extends TestBase {
         step("Профиль пользователя содержит '" + expectedUserName + "'", () -> {
             FrteOibAdminPage frteOibAdminPage = new FrteOibAdminPage();
             frteOibAdminPage.userProfileName().shouldHave(text(expectedUserName));
+            Selenide.clearBrowserLocalStorage();
         });
     }
 
@@ -91,6 +95,7 @@ public class FrteOibAuthUiTests extends TestBase {
         frteOibAuthPage.clickEnterButton();
         frteOibAuthPage.checkAlertContainsMessage("В данный момент вход в систему указанному пользователю недоступен");
         resetLoginAttemptsBeforeCapcha(frteOibAuthPage);
+        Selenide.clearBrowserLocalStorage();
     }
 
     @Test
@@ -108,6 +113,7 @@ public class FrteOibAuthUiTests extends TestBase {
         frteOibAuthPage.clickEnterButton();
         frteOibAuthPage.checkAlertContainsMessage("Вход в систему с этой рабочей станции недоступен");
         resetLoginAttemptsBeforeCapcha(frteOibAuthPage);
+        Selenide.clearBrowserLocalStorage();
     }
 
     @Test
@@ -125,6 +131,7 @@ public class FrteOibAuthUiTests extends TestBase {
         frteOibAuthPage.clickEnterButton();
         frteOibAuthPage.checkAlertContainsMessage("Срок действия учетной записи истек");
         resetLoginAttemptsBeforeCapcha(frteOibAuthPage);
+        Selenide.clearBrowserLocalStorage();
     }
 
     @Test
@@ -142,6 +149,7 @@ public class FrteOibAuthUiTests extends TestBase {
         frteOibAuthPage.clickEnterButton();
         frteOibAuthPage.checkAlertContainsMessage("Учетная запись отключена");
         resetLoginAttemptsBeforeCapcha(frteOibAuthPage);
+        Selenide.clearBrowserLocalStorage();
     }
 
     @Test
@@ -162,6 +170,7 @@ public class FrteOibAuthUiTests extends TestBase {
         frteOibAuthPage.clickEnterButton();
         frteOibAuthPage.checkAlertContainsMessage("Введены неверные логин или пароль");
         resetLoginAttemptsBeforeCapcha(frteOibAuthPage);
+        Selenide.clearBrowserLocalStorage();
     }
 
     @Test
@@ -181,6 +190,7 @@ public class FrteOibAuthUiTests extends TestBase {
         frteOibAuthPage.clickEnterButton();
         frteOibAuthPage.checkAlertContainsMessage("Требуется заполнить поля: Пароль");
         resetLoginAttemptsBeforeCapcha(frteOibAuthPage);
+        Selenide.clearBrowserLocalStorage();
     }
 
     @Test
@@ -202,6 +212,7 @@ public class FrteOibAuthUiTests extends TestBase {
         String expectedRecoveryPasswordTitle = "СЛУЖБА ВОССТАНОВЛЕНИЯ ПАРОЛЯ ПОЛЬЗОВАТЕЛЯ";
         step("Заголовок страницы содержит '" + expectedRecoveryPasswordTitle + "'", () -> {
             assertThat(frteOibRecoveryPasswordPage.getTitle()).isEqualTo(expectedRecoveryPasswordTitle);
+            Selenide.clearBrowserLocalStorage();
         });
     }
 
@@ -210,6 +221,7 @@ public class FrteOibAuthUiTests extends TestBase {
         frteOibAuthPage.setLoginValue("Iapolzovatel");
         frteOibAuthPage.setPasswordValue(passwordValue);
         frteOibAuthPage.clickEnterButton();
+        Selenide.clearBrowserLocalStorage();
     }
 
 }
