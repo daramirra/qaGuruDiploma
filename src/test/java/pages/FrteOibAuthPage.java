@@ -1,54 +1,56 @@
 package pages;
 
+import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class FrteOibAuthPage extends BasePage {
-    final static String BASE_URL = "https://mmc.mos.ru/client-office/security/auth-rvg/login?27&service=http://mmc.mos.ru/client-office/auth/signin-cas";
+    final static String BASE_URL = "https://sdo-oib-test.it2g.ru/admin/";
 
-    @Step("Открыть страницу 'Вход в личный кабинет иностранного гражданина'")
+    @Step("Открыть страницу входа в систему")
     public static FrteOibAuthPage openPage() {
         open(BASE_URL);
         return new FrteOibAuthPage();
     }
 
-    @Step("Перейти на вкладку 'Почта'")
-    public void openEmailTab() {
-        $(By.linkText("Почта")).click();
+    @Step("Открытая страница содержит поле 'Логин'")
+    public void checkLoginInputExists(){
+        $(By.name("LOGIN")).shouldBe(visible);
     }
 
-    @Step("Открытая вкладка 'Почта' содержит поле ввода идентификатора учетной записи 'Почта'")
-    public void emailInputExists() {
-        $(By.name("email")).shouldBe(visible);
-    }
-
-    @Step("Открытая страница содержит поле ввода идентификатора учетной записи 'Телефон'")
-    public void checkPhoneInputExists(){
-        $(By.name("phone")).shouldBe(visible);
-    }
-
-    @Step("Заполнить поле ввода идентификатора учетной записи 'Телефон'")
-    public void setPhoneValue(String phoneValue){
-        $(By.name("phone")).setValue(phoneValue);
+    @Step("Заполнить поле 'Логин'")
+    public void setLoginValue(String loginValue){
+        SelenideElement login = $(By.name("LOGIN"));
+        clearInputValue(login);
+        login.setValue(loginValue);
     }
 
     @Step("Заполнить поле 'Пароль'")
     public void setPasswordValue(String passwordValue){
-        $(By.name("password")).setValue(passwordValue);
+        SelenideElement password = $(By.name("password"));
+        clearInputValue(password);
+        password.setValue(passwordValue);
     }
 
     @Step("Нажать кнопку 'Войти'")
     public void clickEnterButton(){
-        $(By.tagName("button")).click();
+        $(".loginBtn").click();
     }
 
-    @Step("Нажать на ссылку 'Регистрация'")
-    public FrteOibRegistrationPage clickRegistrationLink(){
-        $(By.linkText("Регистрация")).click();
-        return new FrteOibRegistrationPage();
+    @Step("Нажать на ссылку 'Восстановить пароль'")
+    public FrteOibRecoveryPasswordPage clickRecoveryPasswordLink(){
+        $(".recovery").click();
+        return new FrteOibRecoveryPasswordPage();
     }
+
+    private void clearInputValue(SelenideElement element){
+        element.sendKeys(Keys.CONTROL + "A");
+        element.sendKeys(Keys.BACK_SPACE);
+    }
+
 }
