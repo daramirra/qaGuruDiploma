@@ -188,7 +188,7 @@ public class FrteOibAuthUiTests extends TestBase {
     @Layer("web")
     @Story("Открытие страниц")
     @Tags({@Tag("web"), @Tag("smoke")})
-    @Feature("Регистрация пользователя")
+    @Feature("Восстановление пароля")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
     @DisplayName("Переход на страницу 'Восстановление пароля'")
     void checkOpenRecoveryPasswordPage() {
