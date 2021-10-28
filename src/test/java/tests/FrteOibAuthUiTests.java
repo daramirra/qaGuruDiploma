@@ -29,7 +29,7 @@ public class FrteOibAuthUiTests extends TestBase {
     @Tags({@Tag("web"), @Tag("smoke")})
     @Feature("Аутентификация пользователей")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
-    @DisplayName("Проверка заголовка страницы входа")
+    @DisplayName("Проверка заголовка страницы входа в Систему")
     void checkTitleTest() {
         FrteOibAuthPage frteOibAuthPage = FrteOibAuthPage.openPage();
         String expectedTitle = "СЛУЖБА АУТЕНТИФИКАЦИИ ПОЛЬЗОВАТЕЛЕЙ";
@@ -45,7 +45,7 @@ public class FrteOibAuthUiTests extends TestBase {
     @Tags({@Tag("web"), @Tag("smoke")})
     @Feature("Аутентификация пользователей")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
-    @DisplayName("Лог консоли браузера на странице входа не содержит ошибок")
+    @DisplayName("Лог консоли браузера на странице входа в Систему не содержит ошибок")
     void consoleLogShouldNotHaveErrors() {
         FrteOibAuthPage.openPage();
 
@@ -62,7 +62,7 @@ public class FrteOibAuthUiTests extends TestBase {
     @Tags({@Tag("web"), @Tag("smoke")})
     @Feature("Аутентификация пользователей")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
-    @DisplayName("Успешный вход в систему")
+    @DisplayName("Успешный вход в Систему")
     void loginSuccessful() {
         FrteOibAuthPage frteOibAuthPage = FrteOibAuthPage.openPage();
         frteOibAuthPage.setLoginValue("Iapolzovatel");
@@ -83,7 +83,7 @@ public class FrteOibAuthUiTests extends TestBase {
     @Tags({@Tag("web"), @Tag("smoke")})
     @Feature("Аутентификация пользователей")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
-    @DisplayName("Попытка входа в систему вне рабочего расписания доступа")
+    @DisplayName("Попытка входа в Систему вне рабочего расписания доступа")
     void loginOutsideWorkSchedule() {
         FrteOibAuthPage frteOibAuthPage = FrteOibAuthPage.openPage();
         frteOibAuthPage.setLoginValue("Iapolzovatel.3");
@@ -100,7 +100,7 @@ public class FrteOibAuthUiTests extends TestBase {
     @Tags({@Tag("web"), @Tag("smoke")})
     @Feature("Аутентификация пользователей")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
-    @DisplayName("Попытка входа в систему с неразрешенного IP-адреса")
+    @DisplayName("Попытка входа в Систему с неразрешенного IP-адреса")
     void loginWithUnresolvedIPAddress() {
         FrteOibAuthPage frteOibAuthPage = FrteOibAuthPage.openPage();
         frteOibAuthPage.setLoginValue("Iapolzovatel.1");
@@ -117,7 +117,7 @@ public class FrteOibAuthUiTests extends TestBase {
     @Tags({@Tag("web"), @Tag("smoke")})
     @Feature("Аутентификация пользователей")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
-    @DisplayName("Попытка входа в систему под пользователем с истекшим сроком доступа")
+    @DisplayName("Попытка входа в Систему под пользователем с истекшим сроком доступа")
     void loginWithExpiredUser() {
         FrteOibAuthPage frteOibAuthPage = FrteOibAuthPage.openPage();
         frteOibAuthPage.setLoginValue("Iapolzovatel.2");
@@ -134,7 +134,7 @@ public class FrteOibAuthUiTests extends TestBase {
     @Tags({@Tag("web"), @Tag("smoke")})
     @Feature("Аутентификация пользователей")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
-    @DisplayName("Попытка входа в систему под пользователем с отключенной учетной записью")
+    @DisplayName("Попытка входа в Систему под пользователем с отключенной учетной записью")
     void loginWithDisabledAccount() {
         FrteOibAuthPage frteOibAuthPage = FrteOibAuthPage.openPage();
         frteOibAuthPage.setLoginValue("Iapolzovatel.4");
@@ -147,7 +147,7 @@ public class FrteOibAuthUiTests extends TestBase {
     @Test
     @Owner("dlapshinova")
     @Layer("web")
-    @Story("Попытка входа с невалидными данными")
+    @Story("Попытка входа в Систему с невалидными данными")
     @Tags({@Tag("web"), @Tag("smoke")})
     @Feature("Аутентификация пользователей")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
@@ -167,7 +167,7 @@ public class FrteOibAuthUiTests extends TestBase {
     @Test
     @Owner("darina")
     @Layer("web")
-    @Story("Попытка входа с невалидными данными")
+    @Story("Попытка входа в Систему с невалидными данными")
     @Tags({@Tag("web"), @Tag("smoke")})
     @Feature("Вход в личный кабинет")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
