@@ -69,7 +69,7 @@ gradle clean test
 gradle clean test -DremoteDriverUrl=https://[selenoidUser]:[selenoidPwd]@selenoid.autotests.cloud/wd/hub/ 
 -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=5 -DaccountPassword=[passwordValue]
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:green_circle:&nbsp;&nbsp;*Запуск тестов в несколько потоков*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:green_circle:&nbsp;&nbsp;*Запуск тестов в несколько потоков:*
 ```bash
 gradle clean -Dthreads=[threadsValue]
 ```
