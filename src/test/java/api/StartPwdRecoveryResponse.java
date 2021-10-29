@@ -2,13 +2,23 @@ package api;
 
 public class StartPwdRecoveryResponse {
 
-    private String code;
+    private String errorCode;
 
-    public String getCode() {
-        return code;
+    private String maskedEmail;
+
+    public String getErrorCode() {
+        return errorCode;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+    }
+
+    public String getMaskedEmail() {
+        return this.maskedEmail;
+    }
+
+    public void setMaskedEmail(String maskedEmail) {
+        this.maskedEmail = maskedEmail;
     }
 }

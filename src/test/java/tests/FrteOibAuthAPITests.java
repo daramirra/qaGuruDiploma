@@ -29,8 +29,8 @@ public class FrteOibAuthAPITests {
         StartPwdRecoveryRequest request = new StartPwdRecoveryRequest("Iapolzovatel");
         StartPwdRecoveryResponse startPwdRecoveryResponse = pwdRecoveryClient.startPwdRecoveryRecovery(request);
 
-        step("Статус ответа не содержит ошибок", () -> {
-            assertThat(startPwdRecoveryResponse.getCode()).isEqualTo("OK");
+        step("В качестве ответа возвращается t***1@frte.ru", () -> {
+            assertThat(startPwdRecoveryResponse.getMaskedEmail()).isEqualTo("t***1@frte.ru");
         });
     }
 
@@ -47,7 +47,7 @@ public class FrteOibAuthAPITests {
         StartPwdRecoveryResponse startPwdRecoveryResponse = pwdRecoveryClient.startPwdRecoveryRecovery(request);
 
         step("Статус ответа возвращает ошибку 'VALIDATION_ERROR'", () -> {
-            assertThat(startPwdRecoveryResponse.getCode()).isEqualTo("VALIDATION_ERROR");
+            assertThat(startPwdRecoveryResponse.getErrorCode()).isEqualTo("VALIDATION_ERROR");
         });
     }
 
@@ -64,7 +64,7 @@ public class FrteOibAuthAPITests {
         StartPwdRecoveryResponse startPwdRecoveryResponse = pwdRecoveryClient.startPwdRecoveryRecovery(request);
 
         step("Статус ответа возвращает ошибку 'ACCOUNT_NOT_FOUND'", () -> {
-            assertThat(startPwdRecoveryResponse.getCode()).isEqualTo("ACCOUNT_NOT_FOUND");
+            assertThat(startPwdRecoveryResponse.getErrorCode()).isEqualTo("ACCOUNT_NOT_FOUND");
         });
     }
 
@@ -80,8 +80,8 @@ public class FrteOibAuthAPITests {
         StartPwdRecoveryRequest request = new StartPwdRecoveryRequest("Iapolzovatel.3");
         StartPwdRecoveryResponse startPwdRecoveryResponse = pwdRecoveryClient.startPwdRecoveryRecovery(request);
 
-        step("Статус ответа возвращает ошибку 'INTERNAL_ERROR'", () -> {
-            assertThat(startPwdRecoveryResponse.getCode()).isEqualTo("INTERNAL_ERROR");
+        step("Статус ответа возвращает ошибку 'USER_NOT_VALID'", () -> {
+            assertThat(startPwdRecoveryResponse.getErrorCode()).isEqualTo("USER_NOT_VALID");
         });
     }
 
@@ -94,11 +94,11 @@ public class FrteOibAuthAPITests {
     @DisplayName("Ошибка начала процедуры восстановления пароля пользователя с не подтвержденным адресом электронной почты")
     public void errorStartPwdRecoveryWithNotСonfirmedEmail(){
         PwdRecoveryClient pwdRecoveryClient = new PwdRecoveryClient();
-        StartPwdRecoveryRequest request = new StartPwdRecoveryRequest("Iapolzovatel.4");
+        StartPwdRecoveryRequest request = new StartPwdRecoveryRequest(" Iapolzovatel.1");
         StartPwdRecoveryResponse startPwdRecoveryResponse = pwdRecoveryClient.startPwdRecoveryRecovery(request);
 
-        step("Статус ответа возвращает ошибку 'INTERNAL_ERROR'", () -> {
-            assertThat(startPwdRecoveryResponse.getCode()).isEqualTo("INTERNAL_ERROR");
+        step("Статус ответа возвращает ошибку 'USER_NOT_VALID'", () -> {
+            assertThat(startPwdRecoveryResponse.getErrorCode()).isEqualTo("USER_NOT_VALID");
         });
     }
 
@@ -114,8 +114,8 @@ public class FrteOibAuthAPITests {
         StartPwdRecoveryRequest request = new StartPwdRecoveryRequest("Iapolzovatel.4");
         StartPwdRecoveryResponse startPwdRecoveryResponse = pwdRecoveryClient.startPwdRecoveryRecovery(request);
 
-        step("Статус ответа возвращает ошибку 'INTERNAL_ERROR'", () -> {
-            assertThat(startPwdRecoveryResponse.getCode()).isEqualTo("INTERNAL_ERROR");
+        step("Статус ответа возвращает ошибку 'ACCOUNT_NOT_VALID'", () -> {
+            assertThat(startPwdRecoveryResponse.getErrorCode()).isEqualTo("ACCOUNT_NOT_VALID");
         });
     }
 }
