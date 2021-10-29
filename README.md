@@ -142,12 +142,12 @@ allure serve build/allure-results
 
 ## <img width="4%" title="Selenoid" src="images/selenoid-logo.svg"> Пример запуска теста в Selenoid 
 <p align="center">
-  <img src="images/video.gif" alt="video" width="900">
+  <img src="images/video.gif" alt="video" width="1000">
 </p>
 
 ## <img width="4%" title="Telegram" src="images/Telegram.svg"> Уведомления в Telegram 
 <p align="center">
-  <img src="images/tlgrm.png" alt="Telegram" width="700">
+  <img src="images/tlgrm.png" alt="Telegram" width="500">
 </p>
 <br><br>
 
