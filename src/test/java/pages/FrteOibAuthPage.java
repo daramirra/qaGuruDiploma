@@ -20,19 +20,19 @@ public class FrteOibAuthPage extends BasePage {
 
     @Step("Открытая страница содержит поле 'Логин'")
     public void checkLoginInputExists() {
-        $(By.name("LOGIN")).shouldBe(visible);
+        $("#identifier").shouldBe(visible);
     }
 
     @Step("Заполнить поле 'Логин'")
     public void setLoginValue(String loginValue) {
-        SelenideElement login = $(By.name("LOGIN"));
+        SelenideElement login = $("#identifier");
         clearInputValue(login);
         login.setValue(loginValue);
     }
 
     @Step("Заполнить поле 'Пароль'")
     public void setPasswordValue(String passwordValue) {
-        SelenideElement password = $(By.name("password"));
+        SelenideElement password = $("#password");
         clearInputValue(password);
         password.setValue(passwordValue);
     }
@@ -52,5 +52,4 @@ public class FrteOibAuthPage extends BasePage {
         element.sendKeys(Keys.CONTROL + "A");
         element.sendKeys(Keys.BACK_SPACE);
     }
-
 }

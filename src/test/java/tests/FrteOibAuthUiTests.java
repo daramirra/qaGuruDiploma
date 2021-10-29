@@ -182,7 +182,7 @@ public class FrteOibAuthUiTests extends TestBase {
         frteOibAuthPage.checkLoginInputExists();
         frteOibAuthPage.setLoginValue(faker.number().digits(3));
         frteOibAuthPage.clickEnterButton();
-        frteOibAuthPage.checkAlertContainsMessage("Требуется заполнить поля: Пароль");
+        frteOibAuthPage.checkAlertContainsMessage("Требуется заполнить поле: Пароль");
         resetLoginAttemptsBeforeCapcha(frteOibAuthPage);
     }
 
