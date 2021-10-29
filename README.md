@@ -147,7 +147,7 @@ allure serve build/allure-results
 
 ## <img width="4%" title="Telegram" src="images/Telegram.svg"> Уведомления в Telegram 
 <p align="center">
-  <img src="images/tlgrm.png" alt="Telegram" width="900">
+  <img src="images/tlgrm.png" alt="Telegram" width="700">
 </p>
 <br><br>
 
