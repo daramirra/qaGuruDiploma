@@ -81,12 +81,14 @@ allure serve build/allure-results
 ## <img width="4%" title="Jenkins" src="images/jenkins-logo.svg"> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/C07-daramirra-diploma/)
 ### :pushpin: Параметры сборки
 
-    BROWSER (default chrome)
-    BROWSER_VERSION (default 91.0)
-    BROWSER_SIZE (default 1920x1080)
-    REMOTE_DRIVER_URL (url address from selenoid or grid. default selenoid.autotests.cloud)
-    TREADS (default 5)
-    ALLURE_NOTIFICATIONS_VERSION (default 3.1.1)
+    BROWSER (по умолчанию chrome)
+    BROWSER_VERSION (по умолчанию 91.0)
+    BROWSER_SIZE (по умолчанию 1920x1080)
+    REMOTE_DRIVER_URL (url-адрес selenoid. по умолчанию selenoid.autotests.cloud)
+    TREADS (по умолчанию 5)
+    ALLURE_NOTIFICATIONS_VERSION (по умолчанию 3.1.1)
+    ACCOUNT_PASSWORD (пароль учетной записи пользователя для тестов)
+    
 <p align="center">
   <img src="images/job_param.png" alt="job" width="800">
 </p>
@@ -106,6 +108,16 @@ allure serve build/allure-results
 ### :pushpin: Основной дашборд
 <p align="center">
   <img src="images/allureTestOPS dashboards.png" alt="dashboards" width="900">
+</p>
+
+### :pushpin: Дашборд по разным типам тестов
+<p align="center">
+  <img src="images/allureTestOPS dashboards test types.png" alt="dashboards test types" width="900">
+</p>
+
+### :pushpin: Дашборд по команде
+<p align="center">
+  <img src="images/allureTestOPS dashboards team.png" alt="dashboards team" width="900">
 </p>
 
 ### :pushpin: Запуски
