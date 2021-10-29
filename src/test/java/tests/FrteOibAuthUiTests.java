@@ -22,11 +22,12 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class FrteOibAuthUiTests extends TestBase {
 
-    String passwordValue =  Project.config.accountPassword();
+    String passwordValue = Project.config.accountPassword();
 
     @Test
     @Owner("dlapshinova")
     @Layer("web")
+    @Story("Успешный вход в Систему")
     @Tags({@Tag("web"), @Tag("smoke")})
     @Feature("Аутентификация пользователей")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
@@ -35,7 +36,7 @@ public class FrteOibAuthUiTests extends TestBase {
         FrteOibAuthPage frteOibAuthPage = FrteOibAuthPage.openPage();
         String expectedTitle = "СЛУЖБА АУТЕНТИФИКАЦИИ ПОЛЬЗОВАТЕЛЕЙ";
 
-        step("Заголовок страницы входа содержит '" + expectedTitle + "'", () -> {
+        step("Заголовок страницы входа в Систему содержит '" + expectedTitle + "'", () -> {
             assertThat(frteOibAuthPage.getTitle()).isEqualTo(expectedTitle);
         });
     }
@@ -43,6 +44,7 @@ public class FrteOibAuthUiTests extends TestBase {
     @Test
     @Owner("dlapshinova")
     @Layer("web")
+    @Story("Успешный вход в Систему")
     @Tags({@Tag("web"), @Tag("smoke")})
     @Feature("Аутентификация пользователей")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
@@ -50,7 +52,7 @@ public class FrteOibAuthUiTests extends TestBase {
     void consoleLogShouldNotHaveErrors() {
         FrteOibAuthPage.openPage();
 
-        step("Страница входа не содержит ошибок в логах консоли браузера", () -> {
+        step("Страница входа в Систему не содержит ошибок в логах консоли браузера", () -> {
             String consoleLogs = getConsoleLogs();
             assertThat(consoleLogs).doesNotContain("SERVE");
         });
@@ -59,7 +61,7 @@ public class FrteOibAuthUiTests extends TestBase {
     @Test
     @Owner("dlapshinova")
     @Layer("web")
-    @Story("Успешный вход в систему")
+    @Story("Успешный вход в Систему")
     @Tags({@Tag("web"), @Tag("smoke")})
     @Feature("Аутентификация пользователей")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
@@ -152,7 +154,7 @@ public class FrteOibAuthUiTests extends TestBase {
     @Tags({@Tag("web"), @Tag("smoke")})
     @Feature("Аутентификация пользователей")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
-    @DisplayName("Попытка входа с невалидным значением логина")
+    @DisplayName("Попытка входа в Систему с невалидным значением логина")
     void inputInvalidLoginShowErrorMessage() {
         Faker faker = new Faker();
 
@@ -172,7 +174,7 @@ public class FrteOibAuthUiTests extends TestBase {
     @Tags({@Tag("web"), @Tag("smoke")})
     @Feature("Вход в личный кабинет")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
-    @DisplayName("Попытка входа без указания пароля")
+    @DisplayName("Попытка входа в Систему без указания пароля")
     void passwordCouldNotBeEmpty() {
         Faker faker = new Faker();
 
@@ -206,11 +208,10 @@ public class FrteOibAuthUiTests extends TestBase {
         });
     }
 
-    @Step("Сбросить количество попыток входа до вызова капчи")
-    private void resetLoginAttemptsBeforeCapcha(FrteOibAuthPage frteOibAuthPage){
+    @Step("Сбросить количество попыток входа в Систему до вызова капчи")
+    private void resetLoginAttemptsBeforeCapcha(FrteOibAuthPage frteOibAuthPage) {
         frteOibAuthPage.setLoginValue("Iapolzovatel");
         frteOibAuthPage.setPasswordValue(passwordValue);
         frteOibAuthPage.clickEnterButton();
     }
-
 }

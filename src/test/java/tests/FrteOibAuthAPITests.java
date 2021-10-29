@@ -23,13 +23,13 @@ public class FrteOibAuthAPITests {
     @Tags({@Tag("api"), @Tag("smoke")})
     @Feature("Восстановление пароля пользователя")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
-    @DisplayName("Успешное начало процедуры восстановления пароля")
+    @DisplayName("Успешное начало процедуры восстановления пароля пользователя")
     public void successfulStartPwdRecovery(){
         PwdRecoveryClient pwdRecoveryClient = new PwdRecoveryClient();
         StartPwdRecoveryRequest request = new StartPwdRecoveryRequest("Iapolzovatel");
         StartPwdRecoveryResponse startPwdRecoveryResponse = pwdRecoveryClient.startPwdRecoveryRecovery(request);
 
-        step("В качестве ответа возвращается t***1@frte.ru", () -> {
+        step("В качестве ответа возвращается замаскированный адрес электронной почты 't***1@frte.ru'", () -> {
             assertThat(startPwdRecoveryResponse.getMaskedEmail()).isEqualTo("t***1@frte.ru");
         });
     }
@@ -40,7 +40,7 @@ public class FrteOibAuthAPITests {
     @Tags({@Tag("api"), @Tag("smoke")})
     @Feature("Восстановление пароля пользователя")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
-    @DisplayName("Ошибка начала процедуры восстановления пароля без логина")
+    @DisplayName("Ошибка начала процедуры восстановления пароля пользователя без указания логина")
     public void errorStartPwdRecoveryWithEmptyLogin(){
         PwdRecoveryClient pwdRecoveryClient = new PwdRecoveryClient();
         StartPwdRecoveryRequest request = new StartPwdRecoveryRequest(null);
