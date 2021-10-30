@@ -109,6 +109,7 @@ allure serve build/allure-results
 <p align="center">
   <img src="images/Allure Report.png" alt="Allure Report" width="900">
 </p>
+
 *Главня страница Allure-отчета содержит следующие информационные блоки:*
 
 >- [x] <code><strong>*ALLURE REPORT*</strong></code> - отображает дату и время прохождения теста, общее количество прогнанных кейсов, а также диаграмму с указанием процента и количества успешных, упавших и сломавшихся в процессе выполнения тестов.
