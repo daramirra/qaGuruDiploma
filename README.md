@@ -124,6 +124,7 @@ allure serve build/allure-results
 <p align="center">
   <img src="images/Allure Report steps.png" alt="Allure Report" width="900">
 </p>
+
 *На данной странице представляется стандартное распределение выполнявшихся тестов по тестовым наборам или классам, в которых находятся тестовые методы.*
 
 ## <img width="4%" title="Allure TestOPS" src="images/allure-ee-logo.svg"> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/651/dashboards) 
