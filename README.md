@@ -92,13 +92,13 @@ allure serve build/allure-results
     ALLURE_NOTIFICATIONS_VERSION (по умолчанию 3.1.1)
     ACCOUNT_PASSWORD (пароль учетной записи пользователя для тестов)
     
- *Для запуска сборки необходимо указать значения параметров сборки и нажать кнопку <code><strong>*Собрать*</strong></code>.*
+ *Для запуска сборки необходимо указать значения параметров и нажать кнопку <code><strong>*Собрать*</strong></code>.*
  
 <p align="center">
   <img src="images/job_param.png" alt="job" width="800">
 </p>
 
- *После выполнения сборки, в блоке <code><strong>*История сборок*</strong></code> напротив номера сборки появится значок <code><strong>*Allure*</strong></code>, кликнув по которому, откроется страница с сформированным html-отчетом.*
+ *После выполнения сборки, в блоке <code><strong>*История сборок*</strong></code> напротив номера сборки появится значок <img width="2%" title="Allure Report" src="images/allure-Report-logo.svg"><code><strong>*Allure*</strong></code>, кликнув по которому, откроется страница с сформированным html-отчетом.*
 
 <p align="center">
   <img src="images/Allure jobs history.png" alt="job" width="1000">
