@@ -66,8 +66,11 @@ gradle clean test
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:green_circle:&nbsp;&nbsp;*Запуск тестов без заполненного remote.properties:*
 ```bash
-gradle clean test -DremoteDriverUrl=https://[selenoidUser]:[selenoidPwd]@selenoid.autotests.cloud/wd/hub/ 
--DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=5 -DaccountPassword=[passwordValue]
+gradle clean test 
+  -DremoteDriverUrl=https://[selenoidUser]:[selenoidPwd]@selenoid.autotests.cloud/wd/hub/ 
+  -DvideoStorage=https://selenoid.autotests.cloud/video/ 
+  -Dthreads=5 
+  -DaccountPassword=[passwordValue]
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:green_circle:&nbsp;&nbsp;*Запуск тестов в несколько потоков:*
 ```bash
@@ -89,13 +92,16 @@ allure serve build/allure-results
     ALLURE_NOTIFICATIONS_VERSION (по умолчанию 3.1.1)
     ACCOUNT_PASSWORD (пароль учетной записи пользователя для тестов)
     
- Для запуска сборки необходимо указать значения параметров сборки и нажать кнопку <code><strong>*Собрать*</strong></code>.   
+ *Для запуска сборки необходимо указать значения параметров сборки и нажать кнопку <code><strong>*Собрать*</strong></code>.*
+ 
 <p align="center">
   <img src="images/job_param.png" alt="job" width="800">
 </p>
- После выполнения сборки, в блоке <code><strong>*История сборок*</strong></code> напротив номера сборки появится значок <code><strong>*Allure*</strong></code>, кликнув по которому, откроется страница с сформированным html-отчетом.
+
+ *После выполнения сборки, в блоке <code><strong>*История сборок*</strong></code> напротив номера сборки появится значок <code><strong>*Allure*</strong></code>, кликнув по которому, откроется страница с сформированным html-отчетом.*
+
 <p align="center">
-  <img src="images/Allure jobs history.png" alt="job" width="800">
+  <img src="images/Allure jobs history.png" alt="job" width="1000">
 </p>
 
 ## <img width="4%" title="Allure Report" src="images/allure-Report-logo.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/C07-daramirra-diploma/8/allure/)
