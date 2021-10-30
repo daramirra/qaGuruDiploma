@@ -106,9 +106,6 @@ allure serve build/allure-results
 
 ## <img width="4%" title="Allure Report" src="images/allure-Report-logo.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/C07-daramirra-diploma/8/allure/)
 ### :pushpin: Общая информация
-<p align="center">
-  <img src="images/Allure Report.png" alt="Allure Report" width="900">
-</p>
 
 *Главная страница Allure-отчета содержит следующие информационные блоки:*
 
@@ -120,12 +117,17 @@ allure serve build/allure-results
 >- [x] <code><strong>*FEATURES BY STORIES*</strong></code> - отображает распределение тестов по функционалу, который они проверяют.
 >- [x] <code><strong>*EXECUTORS*</strong></code> - отображает исполнителя текущей сборки (ссылка на сборку в Jenkins).
 
+<p align="center">
+  <img src="images/Allure Report.png" alt="Allure Report" width="900">
+</p>
+
 ### :pushpin: Список тестов c описанием шагов и визуализацией результатов
+
+*На данной странице представляется стандартное распределение выполнявшихся тестов по тестовым наборам или классам, в которых находятся тестовые методы.*
+
 <p align="center">
   <img src="images/Allure Report steps.png" alt="Allure Report" width="900">
 </p>
-
-*На данной странице представляется стандартное распределение выполнявшихся тестов по тестовым наборам или классам, в которых находятся тестовые методы.*
 
 ## <img width="4%" title="Allure TestOPS" src="images/allure-ee-logo.svg"> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/651/dashboards) 
 ### :pushpin: Основной дашборд
