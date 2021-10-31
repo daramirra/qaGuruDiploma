@@ -74,7 +74,7 @@ gradle clean test
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:green_circle:&nbsp;&nbsp;*Запуск тестов в несколько потоков:*
 ```bash
-gradle clean -Dthreads=[threadsValue]
+gradle clean test -Dthreads=[threadsValue]
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:green_circle:&nbsp;&nbsp;*Сформировать allure отчет:*
 ```bash
