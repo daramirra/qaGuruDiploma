@@ -98,7 +98,7 @@ allure serve build/allure-results
   <img src="images/job_param.png" alt="job" width="800">
 </p>
 
- *После выполнения сборки, в блоке <code><strong>*История сборок*</strong></code> напротив номера сборки появится значок <img width="2%" title="Allure Report" src="images/allure-Report-logo.svg"><code><strong>*Allure*</strong></code>, кликнув по которому, откроется страница с сформированным html-отчетом.*
+ *После выполнения сборки, в блоке <code><strong>*История сборок*</strong></code> напротив номера сборки появится значок <img width="2%" title="Allure Report" src="images/allure-Report-logo.svg"><code><strong>*Allure Report*</strong></code>, кликнув по которому, откроется страница с сформированным html-отчетом.*
 
 <p align="center">
   <img src="images/Allure jobs history.png" alt="job" width="1000">
