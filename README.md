@@ -81,7 +81,7 @@ gradle clean test
 >- [x] *DbrowserSize - размер окна браузера (по умолчанию 1920x1080)*
 >- [x] *DremoteDriverUrl - логин, пароль и адрес удаленного сервера, где будут выполняться тесты (по умолчанию https://[selenoidUser]:[selenoidPwd]@selenoid.autotests.cloud/wd/hub/)*
 >- [x] *DvideoStorage - хранилище видео выполненных тестов (https://selenoid.autotests.cloud/video/)*
->- [x] *Dthreads - количество потоков выполняющихся тестов (по умолчанию 5)
+>- [x] *Dthreads - количество потоков выполняющихся тестов (по умолчанию 5)*
 >- [x] *DaccountPassword - пароль учетной записи пользователя для тестов*
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:green_circle:&nbsp;&nbsp;*Запуск тестов в несколько потоков:*
