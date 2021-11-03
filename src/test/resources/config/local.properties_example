@@ -1,0 +1,5 @@
+browser=chrome
+browserVersion=91.0
+browserSize=1920x1080
+videoStorage=https://[REMOTE_DRIVER_URL]/video/
+accountPassword=[ACCOUNT_PASSWORD]
