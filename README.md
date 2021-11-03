@@ -67,20 +67,20 @@ gradle clean test
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:green_circle:&nbsp;&nbsp;*Запуск тестов без заполненного remote.properties:*
 ```bash
 gradle clean test 
-  -Dbrowser=${BROWSER}
-  -DbrowserVersion=${BROWSER_VERSION}
-  -DbrowserSize=${BROWSER_SIZE}
-  -DremoteDriverUrl=https://[selenoidUser]:[selenoidPwd]@${REMOTE_DRIVER_URL}/wd/hub/
-  -DvideoStorage=https://${REMOTE_DRIVER_URL}/video/
-  -Dthreads=${THREADS}
-  -DaccountPassword=${ACCOUNT_PASSWORD}
+  -Dbrowser=[BROWSER]
+  -DbrowserVersion=[BROWSER_VERSION]
+  -DbrowserSize=[BROWSER_SIZE]
+  -DremoteDriverUrl=https://[selenoidUser]:[selenoidPwd]@${REMOTE_DRIVER_URL]/wd/hub/
+  -DvideoStorage=https://[REMOTE_DRIVER_URL]/video/
+  -Dthreads=[THREADS]
+  -DaccountPassword=[ACCOUNT_PASSWORD]
 ```
 где:
 >- [x] *Dbrowser - браузер, в котором будут выполняться тесты (по умолчанию chrome)*
 >- [x] *DbrowserVersion - версия браузера (по умолчанию 91.0)*
 >- [x] *DbrowserSize - размер окна браузера (по умолчанию 1920x1080)*
 >- [x] *DremoteDriverUrl - логин, пароль и адрес удаленного сервера, где будут выполняться тесты (по умолчанию https://[selenoidUser]:[selenoidPwd]@selenoid.autotests.cloud/wd/hub/)*
->- [x] *DvideoStorage - хранилище видео выполненных тестов (https://selenoid.autotests.cloud/video/)*
+>- [x] *DvideoStorage - хранилище видео выполненных тестов (по умолчанию https://selenoid.autotests.cloud/video/)*
 >- [x] *Dthreads - количество потоков выполняющихся тестов (по умолчанию 5)*
 >- [x] *DaccountPassword - пароль учетной записи пользователя для тестов*
 
