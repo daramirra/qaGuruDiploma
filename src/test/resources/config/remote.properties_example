@@ -3,4 +3,5 @@ browserVersion=91.0
 browserSize=1920x1080
 remoteDriverUrl=https://[selenoidUser]:[selenoidPwd]@[REMOTE_DRIVER_URL]/wd/hub/
 videoStorage=https://[REMOTE_DRIVER_URL]/video/
+baseUrl=https://[BASE_URL]
 accountPassword=[ACCOUNT_PASSWORD]

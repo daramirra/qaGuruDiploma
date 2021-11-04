@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import config.Project;
 import io.qameta.allure.Step;
 import org.openqa.selenium.Keys;
 
@@ -9,11 +10,10 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class FrteOibAuthPage extends BasePage {
-    final static String BASE_URL = "https://sdo-oib-test.it2g.ru/admin/";
 
     @Step("Открыть страницу входа в систему")
     public static FrteOibAuthPage openPage() {
-        open(BASE_URL);
+        open(Project.config.baseUrl());
         return new FrteOibAuthPage();
     }
 
