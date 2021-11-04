@@ -50,7 +50,7 @@ public class StartPwdRecoveryRequest {
     }
 }
 
-class LoginIdentifier{
+class LoginIdentifier {
     private String login;
 
     public LoginIdentifier() {

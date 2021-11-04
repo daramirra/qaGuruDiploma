@@ -12,6 +12,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
+
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -24,7 +25,7 @@ public class FrteOibAuthAPITests {
     @Feature("Восстановление пароля пользователя")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
     @DisplayName("Успешное начало процедуры восстановления пароля пользователя")
-    public void successfulStartPwdRecovery(){
+    public void successfulStartPwdRecovery() {
         PwdRecoveryClient pwdRecoveryClient = new PwdRecoveryClient();
         StartPwdRecoveryRequest request = new StartPwdRecoveryRequest("Iapolzovatel");
         StartPwdRecoveryResponse startPwdRecoveryResponse = pwdRecoveryClient.startPwdRecoveryRecovery(request);
@@ -41,7 +42,7 @@ public class FrteOibAuthAPITests {
     @Feature("Восстановление пароля пользователя")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
     @DisplayName("Ошибка начала процедуры восстановления пароля пользователя без указания логина")
-    public void errorStartPwdRecoveryWithEmptyLogin(){
+    public void errorStartPwdRecoveryWithEmptyLogin() {
         PwdRecoveryClient pwdRecoveryClient = new PwdRecoveryClient();
         StartPwdRecoveryRequest request = new StartPwdRecoveryRequest(null);
         StartPwdRecoveryResponse startPwdRecoveryResponse = pwdRecoveryClient.startPwdRecoveryRecovery(request);
@@ -58,7 +59,7 @@ public class FrteOibAuthAPITests {
     @Feature("Восстановление пароля пользователя")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
     @DisplayName("Ошибка начала процедуры восстановления пароля пользователя по неизвестному логину")
-    public void errorStartPwdRecoveryWithUnknownLogin(){
+    public void errorStartPwdRecoveryWithUnknownLogin() {
         PwdRecoveryClient pwdRecoveryClient = new PwdRecoveryClient();
         StartPwdRecoveryRequest request = new StartPwdRecoveryRequest("ghgfhg");
         StartPwdRecoveryResponse startPwdRecoveryResponse = pwdRecoveryClient.startPwdRecoveryRecovery(request);
@@ -75,7 +76,7 @@ public class FrteOibAuthAPITests {
     @Feature("Восстановление пароля пользователя")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
     @DisplayName("Ошибка начала процедуры восстановления пароля пользователя с не указанным адресом электронной почты")
-    public void errorStartPwdRecoveryWithEmptyEmail(){
+    public void errorStartPwdRecoveryWithEmptyEmail() {
         PwdRecoveryClient pwdRecoveryClient = new PwdRecoveryClient();
         StartPwdRecoveryRequest request = new StartPwdRecoveryRequest("Iapolzovatel.3");
         StartPwdRecoveryResponse startPwdRecoveryResponse = pwdRecoveryClient.startPwdRecoveryRecovery(request);
@@ -92,7 +93,7 @@ public class FrteOibAuthAPITests {
     @Feature("Восстановление пароля пользователя")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
     @DisplayName("Ошибка начала процедуры восстановления пароля пользователя с не подтвержденным адресом электронной почты")
-    public void errorStartPwdRecoveryWithNotСonfirmedEmail(){
+    public void errorStartPwdRecoveryWithNotСonfirmedEmail() {
         PwdRecoveryClient pwdRecoveryClient = new PwdRecoveryClient();
         StartPwdRecoveryRequest request = new StartPwdRecoveryRequest(" Iapolzovatel.1");
         StartPwdRecoveryResponse startPwdRecoveryResponse = pwdRecoveryClient.startPwdRecoveryRecovery(request);
@@ -109,7 +110,7 @@ public class FrteOibAuthAPITests {
     @Feature("Восстановление пароля пользователя")
     @JiraIssues({@JiraIssue("HOMEWORK-269")})
     @DisplayName("Ошибка начала процедуры восстановления пароля пользователя с отключенной учетной записью")
-    public void errorStartPwdRecoveryWithDisableLogin(){
+    public void errorStartPwdRecoveryWithDisableLogin() {
         PwdRecoveryClient pwdRecoveryClient = new PwdRecoveryClient();
         StartPwdRecoveryRequest request = new StartPwdRecoveryRequest("Iapolzovatel.4");
         StartPwdRecoveryResponse startPwdRecoveryResponse = pwdRecoveryClient.startPwdRecoveryRecovery(request);

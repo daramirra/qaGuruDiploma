@@ -1,4 +1,4 @@
 package pages;
 
-public class FrteOibRecoveryPasswordPage extends BasePage{
+public class FrteOibRecoveryPasswordPage extends BasePage {
 }

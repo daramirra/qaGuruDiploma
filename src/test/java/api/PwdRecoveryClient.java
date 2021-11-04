@@ -18,7 +18,7 @@ public class PwdRecoveryClient {
                 .post()
                 .then()
                 .assertThat().statusCode(200)
-                .extract().body().as(StartPwdRecoveryResponse.class,ObjectMapperType.GSON);
+                .extract().body().as(StartPwdRecoveryResponse.class, ObjectMapperType.GSON);
         return response;
     }
 }
