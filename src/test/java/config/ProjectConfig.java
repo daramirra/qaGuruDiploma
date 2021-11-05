@@ -32,7 +32,7 @@ public interface ProjectConfig extends Config {
     @Config.Key("accountPassword")
     String accountPassword();
 
-    @Config.DefaultValue("https://sdo-oib-test.it2g.ru/admin/")
+    @Config.DefaultValue("https://sdo-oib-test.it2g.ru/")
     @Config.Key("baseUrl")
     String baseUrl();
 }

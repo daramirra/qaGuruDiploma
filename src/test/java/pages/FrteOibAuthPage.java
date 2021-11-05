@@ -13,7 +13,7 @@ public class FrteOibAuthPage extends BasePage {
 
     @Step("Открыть страницу входа в систему")
     public static FrteOibAuthPage openPage() {
-        open(Project.config.baseUrl());
+        open(Project.config.baseUrl() + "admin/");
         return new FrteOibAuthPage();
     }
 
