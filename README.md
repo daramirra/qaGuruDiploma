@@ -212,7 +212,7 @@ Report*</strong></code>, кликнув по которому, откроетс�
 ## <img width="4%" title="Telegram" src="images/daramirra_Telegram.svg"> Уведомления в Telegram
 
 <p align="center">
-  <img src="images/daramirra_tlgrm.png" alt="Telegram" width="500">
+  <img src="images/daramirra_tlgrm.png" alt="Telegram" width="510">
+  <img src="images/daramirra_tlgrm_.png" alt="Telegram" width="450">
 </p>
-<br><br>
-
+:wink:
