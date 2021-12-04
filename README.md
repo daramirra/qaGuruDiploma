@@ -1,3 +1,9 @@
+<p align="right">
+<a href="https://visitor-badge-reloaded.herokuapp.com/badge?page_id=daramirra.qaGuruDiploma&color=55acb7&style=flat&logo=Github&text=Hello_Visitors!">
+  <img src="https://visitor-badge-reloaded.herokuapp.com/badge?page_id=daramirra.qaGuruDiploma&color=55acb7&style=flat&logo=Github&text=Hello_Visitors!"/>
+</a>
+</p>
+
 # Проект по автоматизации тестирования форм
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:heavy_check_mark: [входа в Систему](https://sdo-oib-test.it2g.ru/admin/)
