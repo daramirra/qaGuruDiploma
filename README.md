@@ -1,6 +1,7 @@
 <p align="right">
 <a href="https://visitor-badge-reloaded.herokuapp.com/badge?page_id=daramirra.qaGuruDiploma&color=55acb7&style=flat&logo=Github&text=Hello_Visitors!">
-  <img src="https://visitor-badge-reloaded.herokuapp.com/badge?page_id=daramirra.qaGuruDiploma&color=55acb7&style=flat&logo=Github&text=Hello_Visitors!"/>
+  <img title="|Customized by daramirra|" src="https://visitor-badge-reloaded.herokuapp.com/badge?page_id=daramirra.qaGuruDiploma&color=55acb7&style=flat&logo=Github&text=Hello_Visitors!"/>
+  <img title="|Customized by daramirra|" alt="GitHub watchers" src="https://img.shields.io/github/watchers/daramirra/qaGuruDiploma?color=55acb7&logo=github">
 </a>
 </p>
 
