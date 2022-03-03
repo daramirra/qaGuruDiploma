@@ -11,7 +11,7 @@
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:heavy_check_mark: [восстановления пароля пользователя](https://sdo-oib-test.it2g.ru/auth-sdo/recovery-password?service=https://sdo-oib-test.it2g.ru/admin/shiro-cas)
 
-> *Данные формы являются частью разработки **[Системы обеспечения информационной безопасности "ВИЗОР"](http://visor.frte.ru/solutions/)**, реализованной в одном из внедрений компанией **[ФРЕШТЕХ](http://visor.frte.ru/solutions/)**, сотрудником которой я являюсь на данный момент.*
+> *Данные формы являются частью разработки **[Системы обеспечения информационной безопасности "ВИЗОР"](http://visor.frte.ru/solutions/)**, реализованной в одном из внедрений компанией **[ФРЕШТЕХ](http://visor.frte.ru/solutions/)***
 
 ## :rocket: Технологии и инструменты
 
@@ -222,4 +222,7 @@ Report*</strong></code>, кликнув по которому, откроетс�
   <img src="images/daramirra_tlgrm.png" alt="Telegram" width="440">
   <img src="images/daramirra_tlgrm_.png" alt="Telegram" width="390">
 </p>
-:wink:
+
+## Контакты
+[<img title="My Github" alt="daramirra | Github" width="30px" src="https://github.githubassets.com/favicons/favicon.svg">](https://github.com/daramirra)
+[<img title="My Telegram" alt="daramirra | Telegram" width="30px" src="https://telegram.org/favicon.ico">](https://t.me/daramirra) 
